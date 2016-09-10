@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { last } from 'lodash'
 import logo from './logo.svg'
 import './App.css'
 
@@ -20,20 +19,7 @@ class App extends Component {
     const hits = data.findItemFuzzy(query)
     if (hits.length === 0) return
 
-    const recipes = hits.reduce((acc, hit) => {
-      const recipe = this.getRecipe(hit)
-      if (recipe) acc.push(Object.assign(hit, { recipe: recipe }))
-      return acc
-    }, [])
-
-    this.setState({ hits: recipes })
-  }
-
-  getRecipe (item) {
-    const plans = data.findRecipeFromItem(item.id)
-    let recipe = last(plans.recipesToDo)
-
-    return recipe ? recipe.recipe : undefined
+    this.setState({ hits: hits })
   }
 
   render () {

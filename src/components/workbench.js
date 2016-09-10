@@ -7,19 +7,18 @@ const Row = ({ items }) => (
   <div className='row'>
     {items.map((item, i) => (
       <div key={i} className='invslot'>
-        <InvSlot id={item.id} />
+        <InvSlot item={item} />
       </div>
     ))}
   </div>
 )
 
-const InvSlot = ({ id }) => {
-  const item = data.findItemById(id)
+const InvSlot = ({ item }) => {
   return item ? (
     <div>
       <img
         title={item.displayName}
-        src={data.findTexture(id)}
+        src={data.findTexture(item.id)}
         alt={item.name}
       />
     </div>
@@ -41,7 +40,7 @@ class Workbench extends Component {
         <div className='arrow'></div>
         <div className='output'>
           <div className='invslot invslot--large'>
-            <InvSlot id={this.props.recipe.result.id} />
+            <InvSlot item={this.props.recipe.result} />
           </div>
         </div>
       </div>
