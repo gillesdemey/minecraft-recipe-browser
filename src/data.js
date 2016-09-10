@@ -8,7 +8,7 @@ import { values, merge, find } from 'lodash'
 const dataset = data('1.10')
 
 // concat items with blocks
-const itemsAndBlocks = values(Object.assign(dataset.itemsByName, dataset.blocksByName))
+const itemsAndBlocks = values(Object.assign(dataset.blocks, dataset.items))
 const fuse = new Fuse(itemsAndBlocks, {
   keys: ['displayName'],
   threshold: 0.15 // magic number
