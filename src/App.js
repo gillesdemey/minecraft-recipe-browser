@@ -18,6 +18,7 @@ class App extends Component {
     console.info('searching for %s', query)
 
     const hits = data.findItemFuzzy(query)
+    if (hits.length === 0) return
 
     const recipes = hits.reduce((acc, hit) => {
       const recipe = this.getRecipe(hit)
