@@ -1,0 +1,78 @@
+.mcui {
+  display: inline-block;
+  position: relative;
+  background-color: #C6C6C6;
+  border: 2px solid;
+  border-color: #DBDBDB #5B5B5B #5B5B5B #DBDBDB;
+  padding: 6px;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: bottom;
+
+  image-rendering: pixelated;
+}
+
+.mcui.craftingTable > * {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mcui .row {
+  display: block;
+}
+
+.mcui .invslot {
+  position: relative;
+  display: inline-block;
+  background: #8B8B8B no-repeat center center / 32px 32px;
+  border: 2px solid;
+  border-color: #373737 #FFF #FFF #373737;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  line-height: 1;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.mcui .invslot img {
+  width: 100%;
+  height: 100%;
+}
+
+.mcui .invslot:before {
+  content: "";
+  position: absolute;
+  background-color: #8B8B8B;
+  height: 2px;
+  width: 2px;
+  pointer-events: none;
+  bottom: -2px;
+  left: -2px;
+}
+
+.mcui .invslot:after {
+  content: "";
+  position: absolute;
+  background-color: #8B8B8B;
+  height: 2px;
+  width: 2px;
+  pointer-events: none;
+  top: -2px;
+  right: -2px;
+}
+
+.mcui .output {
+  margin-top: 28px;
+}
+
+.mcui .invslot.invslot--large {
+  padding: 8px;
+}
+
+.mcui .arrow {
+    background: url(data:image/base64;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAbCAAAAAA4rNJGAAAAQElEQVR42mM4hgG6u5F5DGQpQFZCrgKEEvIVwJRQogCihLCCbryAcgXd3ZQqIMYNlIcD7eKC0vRAaZqkNF+gAgA5zlZP3VSoCQAAAABJRU5ErkJggg==) no-repeat;
+    width: 32px;
+    height: 26px;
+    margin: 40px 4px 0;
+}

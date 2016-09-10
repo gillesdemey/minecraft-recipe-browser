@@ -1,0 +1,4 @@
+.hits__list li {
+  display: inline-block;
+  list-style-type: none;
+}
