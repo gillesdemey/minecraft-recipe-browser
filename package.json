@@ -8,10 +8,10 @@
   "dependencies": {
     "fuse.js": "^2.5.0",
     "lodash": "^4.15.0",
-    "minecraft-data": "^2.6.0",
-    "prismarine-recipe": "^1.0.1",
+    "pify": "^2.3.0",
     "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "xhr": "^2.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

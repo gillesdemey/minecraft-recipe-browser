@@ -12,6 +12,10 @@ class App extends Component {
     this.state = { hits: [], recipes: [] }
   }
 
+  componentWillMount () {
+    data.fetch()
+  }
+
   search (query) {
     if (query.length <= 2) return
     console.info('searching for %s', query)
@@ -33,11 +37,11 @@ class App extends Component {
         />
         <div className='search__results'>
           {this.state.hits.map(hit => (
-            <div>
+            <div key={hit.itemID || hit.blockID}>
               <div className='header'>
-                {hit.displayName}
+                {hit.name}
               </div>
-              <Workbench key={hit.recipe.result.id} recipe={hit.recipe} />
+              <Workbench recipe={hit.recipe} result={hit} />
             </div>
           ))}
         </div>
